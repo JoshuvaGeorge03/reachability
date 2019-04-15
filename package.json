@@ -1,6 +1,6 @@
 {
     "name": "ionic-network-reachability",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "it is used to check the network connection",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
@@ -8,7 +8,7 @@
         "lib/**/*"
     ],
     "scripts": {
-        "test": "jest --config jest-config.json",
+        "test": "echo error",
         "build": "tsc",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "lint": "tslint -p tsconfig.json",
@@ -36,12 +36,10 @@
     "author": "Joshuva George",
     "license": "ISC",
     "devDependencies": {
-        "@types/jest": "^24.0.11",
-        "jest": "^24.7.1",
         "prettier": "^1.16.4",
-        "ts-jest": "^24.0.2",
         "tslint": "^5.15.0",
         "tslint-config-prettier": "^1.18.0",
         "typescript": "^3.4.3"
-    }
+    },
+    "dependencies": {}
 }
