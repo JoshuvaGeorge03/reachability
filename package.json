@@ -1,14 +1,22 @@
 {
-    "name": "reachability",
+    "name": "ionic-network-reachability",
     "version": "1.0.0",
-    "description": "\"network reachability\"",
-    "main": "index.js",
-    "files": ["lib/**/*"],
+    "description": "it is used to check the network connection",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "lib/**/*"
+    ],
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest --config jest-config.json",
         "build": "tsc",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-        "lint": "tslint -p tsconfig.json"
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format",
+        "postversion": "git push && git push --tags"
     },
     "repository": {
         "type": "git",
@@ -19,11 +27,19 @@
         "url": "https://github.com/JoshuvaGeorge03/reachability/issues"
     },
     "homepage": "https://github.com/JoshuvaGeorge03/reachability#readme",
-    "keywords": ["reachability", "offline", "online", "network"],
+    "keywords": [
+        "reachability",
+        "offline",
+        "online",
+        "network"
+    ],
     "author": "Joshuva George",
     "license": "ISC",
     "devDependencies": {
+        "@types/jest": "^24.0.11",
+        "jest": "^24.7.1",
         "prettier": "^1.16.4",
+        "ts-jest": "^24.0.2",
         "tslint": "^5.15.0",
         "tslint-config-prettier": "^1.18.0",
         "typescript": "^3.4.3"
