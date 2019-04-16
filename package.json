@@ -1,6 +1,6 @@
 {
     "name": "ionic-network-reachability",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "description": "it is used to check the network connection",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
@@ -15,7 +15,7 @@
         "prepare": "npm run build",
         "prepublishOnly": "npm run lint",
         "preversion": "npm run lint",
-        "version": "npm run format",
+        "version": "npm run format && git add -A src",
         "postversion": "git push && git push --tags"
     },
     "repository": {

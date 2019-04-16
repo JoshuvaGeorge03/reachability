@@ -18,7 +18,7 @@ import { isReachable } from 'ionic-network-reachability';
 export class AppComponent {
     async checkOnline() {
         try {
-            const isOnline = isReachable('url endpoint, this is also optional');
+            const isOnline = isReachable();
             return isOnline;
         } catch(err) {
             

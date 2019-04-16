@@ -1,12 +1,12 @@
-export async function isReachable(url: string = 'https://www.google.com/') {
+export async function isReachable() {
   try {
-    const result = await fetch(url);
+    const result = await fetch('https://httpbin.org/');
     if (result.ok) {
       return true;
     } else {
       return false;
     }
   } catch (error) {
-    throw error;
+    return false;
   }
 }
